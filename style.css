@@ -1,0 +1,71 @@
+.center {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+img {
+    width: 40vw;
+    animation-name: animation-rotate-large;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+button {
+    border-radius: 10px;
+    border-color: rgb(241, 241, 75);
+    background-color: rgb(234, 234, 90);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 10vw;
+    animation-name: animation-rotate-small;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+a {
+    padding: 2.5vw;
+}
+
+body {
+    background-image: url(./game/assets/bg.png);
+    background-size: cover;
+}
+
+@keyframes animation-rotate-large {
+    0%{
+        transform: rotate(-3.25deg)
+
+    }
+    50%{
+        transform: rotate(3.25deg)
+
+    }
+    100%{
+        transform: rotate(-3.25deg)
+    }
+}
+
+@keyframes animation-rotate-small {
+    0%{
+        transform: rotate(-1.25deg)
+
+    }
+    50%{
+        transform: rotate(1.25deg)
+
+    }
+    100%{
+        transform: rotate(-1.25deg)
+    }
+}
