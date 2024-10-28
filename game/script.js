@@ -55,10 +55,8 @@ function spawnMouse() {
   
     document.body.appendChild(mouseElement);
   
-    const mouseWidth = mouseElement.offsetWidth;
     const mouseHeight = mouseElement.offsetHeight;
   
-    const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
   
     const randomX = window.innerWidth + 270;
@@ -111,10 +109,8 @@ function spawnMouseLeft() {
   
     document.body.appendChild(mouseElement);
   
-    const mouseWidth = mouseElement.offsetWidth;
     const mouseHeight = mouseElement.offsetHeight;
   
-    const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
   
     const randomX = -270;
@@ -134,7 +130,6 @@ function spawnMouseLeft() {
     }, 1);
 
     mouseElement.addEventListener("click", () => {
-        // mouseElement.remove();
         scores.mouseHit++;
         SaveVariables();
         scoreLbl.innerText = `Score: ${scores.mouseHit}`;
