@@ -45,38 +45,28 @@ spawnMouse();
 spawnMouseLeft();
 
 function spawnMouse() {
-    // Create a new div element
     const mouseElement = document.createElement("img");
   
-    // Assign the 'mouse' class to the new element
     mouseElement.classList.add("mouse");
     mouseElement.src = "./assets/mouse.png";
   
-    // Set styles to make the element positionable within the viewport
-    mouseElement.style.position = "fixed"; // 'fixed' to prevent background shift
-    mouseElement.style.zIndex = 10; // Optional: Ensure it stays above other elements
+    mouseElement.style.position = "fixed";
+    mouseElement.style.zIndex = 10;
   
-    // Temporarily add it to measure its size
     document.body.appendChild(mouseElement);
   
-    // Get the dimensions of the mouse element
     const mouseWidth = mouseElement.offsetWidth;
     const mouseHeight = mouseElement.offsetHeight;
   
-    // Get the viewport dimensions
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
   
-    // Calculate random position within the viewport boundaries
     const randomX = window.innerWidth + 270;
     const randomY = Math.random() * (viewportHeight - mouseHeight);
   
-    // Set the position of the element
     mouseElement.style.left = `${randomX}px`;
     mouseElement.style.top = `${randomY}px`;
 
-    //posX += window.innerWidth; 
-    //mouseElement.style.left = `${posX}px`; 
     let i = randomX;
     const move = setInterval( () => {
         i-=scores.speed;
@@ -88,7 +78,6 @@ function spawnMouse() {
     }, 1);
 
     mouseElement.addEventListener("click", () => {
-        // mouseElement.remove();
         scores.mouseHit++;
         SaveVariables();
         scoreLbl.innerText = `Score: ${scores.mouseHit}`;
@@ -104,7 +93,6 @@ function spawnMouse() {
 
 };
   
-// Call the function to spawn the mouse element
 setInterval( () => {
     if (!document.hidden)
         spawnMouse();
@@ -113,39 +101,28 @@ setInterval( () => {
 
 
 function spawnMouseLeft() {
-    // Create a new div element
     const mouseElement = document.createElement("img");
   
-    // Assign the 'mouse' class to the new element
     mouseElement.classList.add("mouse");
     mouseElement.src = "./assets/mouse-l.png";
   
-    // Set styles to make the element positionable within the viewport
-    mouseElement.style.position = "fixed"; // 'fixed' to prevent background shift
-    mouseElement.style.zIndex = 10; // Optional: Ensure it stays above other elements
+    mouseElement.style.position = "fixed";
+    mouseElement.style.zIndex = 10;
   
-    // Temporarily add it to measure its size
     document.body.appendChild(mouseElement);
   
-    // Get the dimensions of the mouse element
     const mouseWidth = mouseElement.offsetWidth;
     const mouseHeight = mouseElement.offsetHeight;
   
-    // Get the viewport dimensions
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
   
-    // Calculate random position within the viewport boundaries
     const randomX = -270;
     const randomY = Math.random() * (viewportHeight - mouseHeight);
   
-    // Set the position of the element
     mouseElement.style.left = `${randomX}px`;
     mouseElement.style.top = `${randomY}px`;
 
-    
-    //posX += window.innerWidth; 
-    //mouseElement.style.left = `${posX}px`; 
     let i = randomX;
     const move = setInterval( () => {
         i+=scores.speed;
@@ -172,7 +149,6 @@ function spawnMouseLeft() {
 
 };
   
-// Call the function to spawn the mouse element
 setInterval( () => {
     if (!document.hidden)
         spawnMouseLeft();
@@ -180,17 +156,15 @@ setInterval( () => {
 
 async function FullScreen() {
     if (!document.fullscreenElement) {
-        // Enter full-screen mode on the body
         if (document.body.requestFullscreen) {
             await document.body.requestFullscreen();
-        } else if (document.body.webkitRequestFullscreen) { // Safari compatibility
+        } else if (document.body.webkitRequestFullscreen) { 
             await document.body.webkitRequestFullscreen();
         }
     } else {
-        // Exit full-screen mode
         if (document.exitFullscreen) {
             await document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) { // Safari compatibility
+        } else if (document.webkitExitFullscreen) {
             await document.webkitExitFullscreen();
         }
     }
