@@ -24,8 +24,8 @@
     <dialog id="resetConfirm">
         <h1>Are you sure you want to reset the game?</h1>
 
-        <button class="ideal">No</button>
-        <button class="yes" onclick="resetGame()">Yes</button>
+        <button class="ideal" onclick="resetClose()">No</button>
+        <button class="yes" onclick="resetGame(), resetClose()">Yes</button>
     </dialog>
 
     <label id="score">

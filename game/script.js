@@ -9,9 +9,11 @@ const defaultScores = {
 };
 
 let dialogSettings;
+let dialogReset;
 
 document.addEventListener("DOMContentLoaded", () => {
     dialogSettings = document.getElementById("settings");
+    dialogReset = document.getElementById("resetConfirm");
 });
 
 const scoreLbl = document.getElementById("score");
@@ -96,8 +98,6 @@ setInterval( () => {
         spawnMouse();
 }, 6000);  
 
-
-
 function spawnMouseLeft() {
     const mouseElement = document.createElement("img");
   
@@ -121,7 +121,9 @@ function spawnMouseLeft() {
 
     let i = randomX;
     const move = setInterval( () => {
-        i+=scores.speed;
+        var num = 0;
+        num = parseFloat(scores.speed);        
+        i+=num;
         mouseElement.style.left = `${i}px`;
         if (i >= window.innerWidth) {
             mouseElement.remove();
@@ -193,3 +195,7 @@ function closeSettings() {
 function openSettings() {
     dialogSettings.showModal();
 };
+
+function resetClose() {
+    dialogReset.close();
+}

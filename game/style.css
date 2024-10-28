@@ -11,6 +11,10 @@ html, body {
     overflow: hidden;
 }
 
+button {
+    cursor: pointer;
+}
+
 label {
     font-size: 2vw;
 }
@@ -25,6 +29,7 @@ label {
     animation-direction: reverse;
     animation-fill-mode: backwards;
     animation-play-state: running;
+    cursor: pointer;
 }
 
 .remove {
@@ -37,6 +42,7 @@ label {
     animation-direction: reverse;
     animation-fill-mode: backwards;
     animation-play-state: running;
+    cursor: pointer;
 }
 
 .info {
@@ -108,7 +114,9 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;  
-    justify-content: center;   
+    justify-content: center;  
+    max-height: 10vh;
+    max-width: auto;
 }
 
 .close {
