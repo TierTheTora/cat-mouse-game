@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/icon" href="./assets/favicon.png">
+</head>
+<body>
+
+    <dialog id="settings">
+        <button class="close" onclick="closeSettings()">X</button>
+        <label class="info">(Default: 1.5)</label><br>
+        <label id="mouseSpeed"> Mouse speed: </label><input type="text" id="input" name="speed"><br><br>
+        <div id="outline-black">
+            <a id="reset" onclick="document.getElementById('resetConfirm').showModal(), closeSettings()">Reset Game</a>
+        </div>
+    </dialog>
+
+    <dialog id="resetConfirm">
+        <h1>Are you sure you want to reset the game?</h1>
+
+        <button class="ideal">No</button>
+        <button class="yes" onclick="resetGame()">Yes</button>
+    </dialog>
+
+    <label id="score">
+        Score: 0
+    </label>
+
+    <button class="btn">
+        <img src="./assets/fullscreen.png" id="fullscreen" onclick="FullScreen()">
+    </button>
+
+    <button class="btn">
+        <img src="./assets/settings.png" id="gear" onclick="openSettings()" >
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

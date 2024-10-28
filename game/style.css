@@ -1,0 +1,221 @@
+* {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+html, body {
+    background-image: url(./assets/bg.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+label {
+    font-size: 2vw;
+}
+
+.mouse {
+    width: 15vw;
+    animation-name: animation-rotate-large;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+.remove {
+    width: 15vw;
+    animation-name: animation-mouse-remove;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+.info {
+    font-size: 15px;
+    color: rgb(46, 46, 46);
+}
+
+.btn #fullscreen {
+    width: auto;
+    height: 10vh;
+    margin-right: 5px;
+    float: bottom;
+    bottom: 10px;
+    right: 10px;  
+    padding: 100px;
+}
+
+.btn #squash {
+    width: auto;
+    height: 10vh;
+    margin-right: 5px;
+    float: bottom;
+    bottom: 10px;
+    right: 10px;  
+    padding: 70px;
+    animation-name: animation-squash-large;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+.btn #gear {
+    width: auto;
+    height: 10vh;
+    margin-right: 5px;
+    float: bottom;
+}
+
+.btn #gear:hover {
+    width: auto;
+    height: 10vh;
+    margin-right: 5px;
+    float: bottom;
+    animation-name: animation-spin-full;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+.btn {
+    border-radius: 100px;
+    background-color: transparent;
+    border-color: transparent;
+    outline-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 10vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;   
+}
+
+.close {
+    background-color: transparent;
+    border-color: transparent;
+    outline-color: transparent;   
+    display: flex;
+    justify-content: right;
+    outline: none;
+    float: right;
+    font-size: 70px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+.yes, .ideal{
+    border-color: transparent;
+    outline-color: transparent;   
+    background-color: transparent;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.ideal {
+    border-color: black;
+}
+
+#score {
+    float: left;
+    display: flex;
+    justify-content: center;  
+    align-items: flex-end;
+    height: 100vh;
+    font-size: 50px;
+    bottom: 10px;
+    right: 10px; 
+}
+
+#reset {
+    background-color: transparent;
+    border-color: transparent;
+    outline-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#mouseSpeed {
+    font-size: 30px;
+}
+
+#outline-black {
+    border-color: black;
+    outline-color: black;
+}
+
+dialog {
+    background-image: url(./assets/dialog.png);
+    background-size: cover;
+    width: fit-content;
+    height: fit-content;
+}
+
+input, input:active, input:active::after {
+    background-color: transparent;
+}
+
+@keyframes animation-rotate-large {
+    0%{
+        transform: rotate(-3.25deg)
+
+    }
+    50%{
+        transform: rotate(3.25deg)
+
+    }
+    100%{
+        transform: rotate(-3.25deg)
+    }
+}
+
+@keyframes animation-mouse-remove {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes animation-spin-full {
+    from{
+        transform: rotate(360deg)
+    }
+    to{
+        transform: rotate(-360deg)
+    }
+}
+
+@keyframes animation-squash-large {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    50% {
+        transform: scaleX(1.2) scaleY(0.8);
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
