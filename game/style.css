@@ -57,7 +57,17 @@ label {
     float: bottom;
     bottom: 10px;
     right: 10px;  
-    padding: 100px;
+    gap: 100px;
+    margin: 100px;
+}
+
+.btn #sound {
+    width: auto;
+    height: 12vh;
+    margin-right: 5px;
+    float: bottom;
+    bottom: 10px;
+    right: 10px;  
 }
 
 .btn #squash {
@@ -83,6 +93,8 @@ label {
     height: 10vh;
     margin-right: 5px;
     float: bottom;
+    /*gap: 100px;
+    margin: 110px;*/
 }
 
 .btn #gear:hover {
@@ -98,6 +110,8 @@ label {
     animation-direction: reverse;
     animation-fill-mode: backwards;
     animation-play-state: running;
+    /*gap: 100px;
+    margin: 110px;*/
 }
 
 .btn {
