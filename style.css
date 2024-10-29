@@ -5,6 +5,28 @@
     height: 100vh;
 }
 
+#animate-fade {
+    animation-name: animation-fade-full;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+#animate-spin {
+    animation-name: animation-spin-small;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
 img {
     width: 40vw;
     animation-name: animation-rotate-large;
@@ -59,7 +81,6 @@ body {
 @keyframes animation-rotate-small {
     0%{
         transform: rotate(-1.25deg)
-
     }
     50%{
         transform: rotate(1.25deg)
@@ -67,5 +88,26 @@ body {
     }
     100%{
         transform: rotate(-1.25deg)
+    }
+}
+
+@keyframes animation-fade-full {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes animation-spin-small {
+    0% {
+        transform: rotate(-260.5deg)
+    }
+    50% {
+        transform: rotate(260.5deg)
+    }
+    100% {
+        transform: rotate(-260.5deg)
     }
 }
