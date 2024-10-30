@@ -27,7 +27,12 @@
     animation-play-state: running;
 }
 
-img {
+#github {
+    width: 5vw;
+    float: right;
+}
+
+#name {
     width: 40vw;
     animation-name: animation-rotate-large;
     animation-duration: 2s;
@@ -53,6 +58,7 @@ button {
     animation-direction: reverse;
     animation-fill-mode: backwards;
     animation-play-state: running;
+    cursor: pointer;
 }
 
 a {
@@ -62,6 +68,7 @@ a {
 body {
     background-image: url(./game/assets/bg.png);
     background-size: cover;
+    overflow: hidden;
 }
 
 @keyframes animation-rotate-large {
